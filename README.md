@@ -53,6 +53,10 @@ I welcome contributions! If you have ideas for new calculations or improvements 
 
 - Prime Factor Calculations
 
+- Circumference Calculations(circle , triangle types  , equilateral types and more)
+
+- Factorial Calculations
+
 - and much more will be added !
 
   
