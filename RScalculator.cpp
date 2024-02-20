@@ -59,7 +59,7 @@ class SelectionPage
 	cout<<"\t3- Prime Factor Calculator	"<<endl<<endl;
 	cout<<"\t4- Circumference Calculator	"<<endl<<endl;
 	cout<<"\t5- Factorial Calculation	"<<endl<<endl;
-
+	cout<<"\t6- Inch Calculation	"<<endl<<endl;
 	
     cout<<"--------------------------------------------------------------------------------"<<endl<<endl;
    }   
@@ -450,6 +450,7 @@ public:
 
 
 class CircumferenceCalculator{
+	//version 1.0
 int choice;
 double answer;
 public:
@@ -778,6 +779,7 @@ void answerCircumference()
 
 class FactorialCalculator
 {
+	//version1.0
   int number;
   int answer = 1.0;
 public:
@@ -833,6 +835,64 @@ public:
 };
 
 
+class InchCalculator{
+    int choice;
+	double inch;
+	double cm;
+	double result;
+	public:
+
+		void questionInch()
+		{
+			system("clear");
+			cout << "\t\t\tINCH CALCULATOR" << endl;
+			cout <<
+			  "--------------------------------------------------------------------------------"
+			  << endl << endl;
+			  cout<<" 1-Inch to Cm"<<endl<<endl;
+			  cout<<" 2-Cm to Inch"<<endl<<endl;
+
+			  cout<<"Enter your choice: ";
+			  cin>>choice;	
+			  if(choice == 1){
+				cout<<endl<<endl;
+				cout<<"Please write the length in inch: ";	
+				cin>>inch;
+				
+			  }
+			  else if(choice == 2){	
+				cout<<endl<<endl;
+				cout<<"Please write the length in cm: ";	
+				cin>>cm;	
+			  }	
+			
+}
+
+void calculationInch()
+{
+	if(choice == 1){
+		result = inch * 2.54;
+	}
+	else if(choice == 2){
+		result = cm / 2.54;
+	}
+}	
+void answerInch()
+{
+	cout<<endl;
+
+	if(choice == 1){
+		cout<<"The length is: "<<result<<" cm"<<endl<<endl;
+	}
+	else if(choice == 2){	
+	cout<<"The length is: "<<result<<" inch"<<endl<<endl;
+	
+	 cout <<"--------------------------------------------------------------------------------"
+	     << endl << endl;	
+		 }
+		  }
+};
+
 int main()
 {
     FirstScreen call;
@@ -855,6 +915,7 @@ int main()
 	PrimeFactorCalculator call3;
 	CircumferenceCalculator call4;
 	FactorialCalculator call5;
+	InchCalculator call6;
 	
 
 
@@ -926,7 +987,21 @@ int main()
 		cout<<"Do you want to continue? (y/n): ";
 		cin>>continueto;	
         
-        //deneme
+        
+		} while(continueto=='y'||continueto=='Y'); 
+		break;	
+
+		case 6:
+		do{
+        
+		call6.questionInch();
+		call6.calculationInch();
+		call6.answerInch();	
+		
+		cout<<"Do you want to continue? (y/n): ";
+		cin>>continueto;	
+        
+        
 		} while(continueto=='y'||continueto=='Y'); 
 		break;	
 
@@ -938,6 +1013,8 @@ int main()
     } 
       
  }
+
+ 
 
     return 0;   
 }
