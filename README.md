@@ -57,6 +57,8 @@ I welcome contributions! If you have ideas for new calculations or improvements 
 
 - Factorial Calculations
 
+- Radical Number Calculations (new)
+
 - and much more will be added !
 
   
