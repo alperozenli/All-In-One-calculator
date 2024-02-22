@@ -58,14 +58,16 @@ class SelectionPage
 	cout<<"\t2- Area Calculator "<<endl<<endl;
 	cout<<"\t3- Prime Factor Calculator	"<<endl<<endl;
 	cout<<"\t4- Circumference Calculator	"<<endl<<endl;
-	cout<<"\t5- Factorial Calculation	"<<endl<<endl;
-	cout<<"\t6- Inch Calculation	"<<endl<<endl;
+	cout<<"\t5- Factorial Calculator	"<<endl<<endl;
+	cout<<"\t6- Inch Calculator	"<<endl<<endl;
+	cout<<"\t7- Radical Number Calculator	"<<endl<<endl;
 	
     cout<<"--------------------------------------------------------------------------------"<<endl<<endl;
    }   
    
 
 };
+
 class Transiction
 {
 	//version1.0
@@ -836,6 +838,7 @@ public:
 
 
 class InchCalculator{
+   //version 1.0
     int choice;
 	double inch;
 	double cm;
@@ -893,6 +896,71 @@ void answerInch()
 		  }
 };
 
+
+class RadicalCalculator{
+   //version 1.0
+	int choice;
+	double root;
+	double number;
+	double result;
+	public:	
+		void questionRadical()
+		{
+			system("clear");
+			cout << "\t\t\tRADICAL NUMBER CALCULATOR" << endl;
+			cout <<
+			  "--------------------------------------------------------------------------------"
+			  << endl << endl;
+			  cout<<"Please enter the degree of root: ";	
+			  cin>>root;
+			  if(root<=0)
+			  {
+				system("clear");
+				cout << "\t\t\tWARNING" << endl;
+				cout <<
+				  "--------------------------------------------------------------------------------"
+				  << endl << endl;
+				
+				do{
+					cout << "Please enter a positive number: "<<flush;
+				sleep (2);
+					cin>>root;	
+				}while(root<=0);	
+				
+			  	cout<<endl<<endl;
+			  	
+			  }	
+			  cout<<endl<<endl;	
+			  cout<<"Please enter the number inside the root: ";	
+			  cin>>number;	
+			  if(number<0)
+			  {
+			  	system("clear");
+				cout << "\t\t\tWARNING" << endl;
+				cout <<
+				  "--------------------------------------------------------------------------------"
+				  << endl << endl;
+				cout << "Please enter a positive number" << endl << endl;
+				sleep (2);
+				questionRadical ();	
+			  }	
+
+
+		}
+
+		void calculationRadical()
+		{
+			result = pow(number,1/root);
+		}
+		void answerRadical()
+		{
+			cout<<endl;	
+			cout<<"The root is: "<<result<<endl<<endl;
+			cout <<"--------------------------------------------------------------------------------"	
+			<< endl << endl;	}
+				
+};
+
 int main()
 {
     FirstScreen call;
@@ -916,6 +984,7 @@ int main()
 	CircumferenceCalculator call4;
 	FactorialCalculator call5;
 	InchCalculator call6;
+	RadicalCalculator call7;	
 	
 
 
@@ -997,6 +1066,21 @@ int main()
 		call6.questionInch();
 		call6.calculationInch();
 		call6.answerInch();	
+		
+		cout<<"Do you want to continue? (y/n): ";
+		cin>>continueto;	
+        
+        
+		} while(continueto=='y'||continueto=='Y'); 
+		break;	
+
+
+		case 7:
+		do{
+        
+		call7.questionRadical();
+		call7.calculationRadical();
+		call7.answerRadical();	
 		
 		cout<<"Do you want to continue? (y/n): ";
 		cin>>continueto;	
