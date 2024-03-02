@@ -61,6 +61,8 @@ class SelectionPage
 	cout<<"\t5- Factorial Calculator	"<<endl<<endl;
 	cout<<"\t6- Inch Calculator	"<<endl<<endl;
 	cout<<"\t7- Radical Number Calculator	"<<endl<<endl;
+	cout<<"\t8- Square Meter Calculator	"<<endl<<endl;
+	
 	
     cout<<"--------------------------------------------------------------------------------"<<endl<<endl;
    }   
@@ -961,6 +963,43 @@ class RadicalCalculator{
 				
 };
 
+
+class SquareMeterCalculator
+{
+	//version 1.0
+	double area;
+	double width;
+	double length;
+	double result;
+	public:
+		void questionSquareMeter()
+		{
+			system("clear");
+			cout << "\t\t\tSQUARE METER CALCULATOR" << endl;
+			cout <<
+			  "--------------------------------------------------------------------------------"
+			  << endl << endl;
+			cout << "Please enter the length in meters: ";
+			cin>>length;
+			cout << "Please enter the width in meters: ";
+			cin>>width;
+			area = length * width;	
+			
+		}	
+		void calculationSquareMeter()
+		{
+			result = area ;
+		}
+		void answerSquareMeter()
+		{
+			cout << endl;
+			cout << "The area in square feet is: " << result <<" m² " << endl << endl;
+			cout <<
+			  "--------------------------------------------------------------------------------"
+			  << endl << endl;
+		}	
+};
+
 int main()
 {
     FirstScreen call;
@@ -985,6 +1024,7 @@ int main()
 	FactorialCalculator call5;
 	InchCalculator call6;
 	RadicalCalculator call7;	
+	SquareMeterCalculator call8;	
 	
 
 
@@ -1081,6 +1121,20 @@ int main()
 		call7.questionRadical();
 		call7.calculationRadical();
 		call7.answerRadical();	
+		
+		cout<<"Do you want to continue? (y/n): ";
+		cin>>continueto;	
+        
+        
+		} while(continueto=='y'||continueto=='Y'); 
+		break;	
+
+		case 8:
+		do{
+        
+		call8.questionSquareMeter();
+		call8.calculationSquareMeter();
+		call8.answerSquareMeter();	
 		
 		cout<<"Do you want to continue? (y/n): ";
 		cin>>continueto;	
