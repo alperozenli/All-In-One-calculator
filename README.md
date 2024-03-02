@@ -57,7 +57,9 @@ I welcome contributions! If you have ideas for new calculations or improvements 
 
 - Factorial Calculations
 
-- Radical Number Calculations (new)
+- Radical Number Calculations
+  
+- Square Meter Calculations (new)
 
 - and much more will be added !
 
