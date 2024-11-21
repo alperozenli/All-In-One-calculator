@@ -1013,7 +1013,7 @@ int main()
     system("clear"); 
     callx.selection();
     int choice;
-    cout<<"Enter your choice: ";
+    cout<<"Enter Your Choice: ";
     cin>>choice;
     char continueto;  
 

@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/alperozenli/Desktop/ADVANCED CALC/All-In-One-calculator",
+      "program": "/Users/alperozenli/Desktop/ADVANCED CALC/All-In-One-calculator/build/Debug/outDebug"
+    }
+  ]
+}
